@@ -14,6 +14,7 @@ askUser = input("To what would you like to convert PLN?\n"
 data = askUser.split()
 amount = data[0]
 currency = data[1]
+currency = currency.upper()
 change_currency = data[3]
 change_currency = change_currency.upper()
 currency_exchange = {
@@ -23,8 +24,11 @@ currency_exchange = {
 }
 
 
-def convert(user_amount, change):
-    result = int(user_amount) * currency_exchange[change]
+def convert(user_amount, currency, change):
+    if currency == "PLN":
+        result = int(user_amount) * currency_exchange[change]
+    else:
+        result = int(user_amount) / currency_exchange[currency]
     return result
 
-print(convert(amount, change_currency))
+print(convert(amount, currency, change_currency))

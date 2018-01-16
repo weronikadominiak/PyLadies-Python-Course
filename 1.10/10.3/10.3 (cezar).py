@@ -12,7 +12,7 @@ app = Flask(__name__)
 def cezar_handler():
     new_text = ""
     if request.method == 'POST':
-        user_text = request.form.get("text")
+        user_text = request.form.get("text", '') # te cudzyslowy sa wartosciami domyslnymi)
         user_offset = request.form.get("offset")
 
         def cezar(word, offset):
