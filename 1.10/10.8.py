@@ -24,6 +24,9 @@ class Szescian(Bryla):
     def pobierz_dane(self):
         a = input("Podaj wartosc a: \n")
 
+    def pliczV(self, a):
+        obj = a ^ 3
+
 
 class Prostopadloscian(Bryla):
     def __init__(self):
@@ -34,6 +37,9 @@ class Prostopadloscian(Bryla):
         b = input("Podaj wartosc b: \n")
         c = input("Podaj wartosc c: \n")
 
+    def policzV(self):
+        obj = a * b * c
+
 
 class Kula(Bryla):
     def __init__(self):
@@ -41,6 +47,9 @@ class Kula(Bryla):
 
     def pobierz_dane(self):
         r = input("Podaj wartosc r: \n")
+
+    def policzV(self):
+        obj = 4/3 * 3.14 * r
 
 x = Bryla.zapytaj_uzytkownika(Bryla)
 x = int(x)
@@ -52,3 +61,6 @@ elif x == 3:
     Kula.pobierz_dane(Kula)
 else:
     print("Papa")
+
+
+w zadaniu jest blad brakuje jednego wzoru nie bedzie kula tylko walec
