@@ -1,3 +1,3 @@
 # PyLadies---Python-Course
-My PyLadies Course tasks solutions.
+My PyLove/PyLadies Course tasks solutions.
 
